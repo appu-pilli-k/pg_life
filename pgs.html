@@ -1,0 +1,23 @@
+<h2>Browse PG Listings</h2>
+<form method="GET">
+  <input type="text" name="search" placeholder="Search by name or address">
+  <select name="gender">
+    <option value="">All</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="unisex">Unisex</option>
+  </select>
+  <button type="submit">Search</button>
+</form>
+
+{% for pg in pgs %}
+  <div style="border:1px solid #ccc; padding:10px; margin:10px;">
+    <h3>{{ pg.name }}</h3>
+    <p><strong>Address:</strong> {{ pg.address }}</p>
+    <p><strong>Rent:</strong> ₹{{ pg.rent }}</p>
+    <p><strong>For:</strong> {{ pg.gender.title() }}</p>
+    <p><strong>Amenities:</strong> {{ pg.amenities }}</p>
+  </div>
+{% else %}
+  <p>No PGs found matching your search.</p>
+{% endfor %}

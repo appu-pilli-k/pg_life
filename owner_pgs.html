@@ -1,0 +1,12 @@
+<h2>My PG Listings</h2>
+{% for pg in pgs %}
+  <div style="border:1px solid #ccc; padding:10px; margin:10px;">
+    <h3>{{ pg.name }}</h3>
+    <p><b>Address:</b> {{ pg.address }}</p>
+    <p><b>Rent:</b> ₹{{ pg.rent }}</p>
+    <p><b>Gender:</b> {{ pg.gender }}</p>
+    <p><b>Amenities:</b> {{ pg.amenities }}</p>
+  </div>
+{% else %}
+  <p>No listings yet. <a href="{{ url_for('add_pg') }}">Add one</a></p>
+{% endfor %}
