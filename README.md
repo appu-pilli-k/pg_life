@@ -1,1 +1,1 @@
-
+ PG Life is a full-stack web app build to helping users find PG accommodations across Indian cities. It features city-based search, user accounts, wishlists, and admin dashboards for managing listings. Future upgrades include owner portals, online payments, and AI-driven recommendations.
